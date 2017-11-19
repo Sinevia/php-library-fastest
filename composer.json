@@ -1,0 +1,20 @@
+{
+    "name": "sinevia/php-library-fastest",
+    "description": "PHP Library Fastest",
+    "version": "0.0.1",
+    "type": "library",
+    "keywords": ["fastest", "library", "php", "sinevia"],    
+    "homepage": "http://github.com/sinevia/php-library-fastest",
+    "license": "commercial",
+    "authors": [
+        {
+            "name": "Milan Lesichkov",
+            "email": "lesichkovm@gmail.com",
+            "homepage": "http://lesichkov.co.uk",
+            "role": "Lead Developer"
+        }
+    ],
+    "autoload": {
+        "files": ["src/fastest.php"]
+    }
+}
