@@ -3,7 +3,7 @@
 namespace Sinevia;
 
 function fastest($options = []) {
-    $action = trim($_REQUEST['a'] ?? 'home');
+    $action = $action = trim(str_replace(['__'],'_',str_replace(['/',' '],'_',$_REQUEST['a'] ?? 'home')),'_');
     $function = $action . '_action';
     if (function_exists($function)) {
         die(call_user_func($function));
