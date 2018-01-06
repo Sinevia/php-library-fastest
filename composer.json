@@ -1,7 +1,6 @@
 {
     "name": "sinevia/php-library-fastest",
     "description": "PHP Library Fastest",
-    "version": "0.0.1",
     "type": "library",
     "keywords": ["fastest", "library", "php", "sinevia"],    
     "homepage": "http://github.com/sinevia/php-library-fastest",
