@@ -35,11 +35,18 @@ Add the following to your composer file:
 
 ## Usage ##
 
+1. Add the following line to where the router will be working. It can be the main router of the app, or a standalone PHP webpage.
 
 ```php
+// Add the actions
+require_once('../actions/home_action.php');
+require_once('../actions/login_action.php');
+
+// Execute the router
 \Sinevia::fastest();
 ```
 
+2. Example functions
 ```php
 /**
  * The home function
