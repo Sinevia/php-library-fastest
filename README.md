@@ -2,8 +2,14 @@
 
 Fastest router
 
-## Background ##
-Simple and unassuming router. The router checks for an action parameter in the URL and if found executes an function for the requested action. The action function has the same name as the requested action with the "_action" postfix.
+## How it works ##
+Simple and unassuming router. 
+1. The router checks for an action parameter in the URL. If not found assumes "home".
+2. Executes a PHP function for the requested action.
+3. The action function has the same name as the requested action with the "_action" postfix.
+   (action: home => function: home_action)
+4. Dashes, spaces, and forward slashes are replaced with underscores 
+   (action: auth/login => function: auth_login_action)
 
 ## Installation ##
 
