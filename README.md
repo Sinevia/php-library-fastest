@@ -6,6 +6,12 @@ Fastest router
 
 ## Installation ##
 
+1. using composer (recommended)
+
+```bash
+composer require sinevia/php-library-fastest
+```
+
 Add the following to your composer file:
 
 ```json
