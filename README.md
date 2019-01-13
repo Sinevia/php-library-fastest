@@ -22,25 +22,13 @@ Simple and unassuming router.
 
 ## Installation ##
 
-1. using composer (recommended)
+1. Using composer (recommended)
 
 ```bash
 composer require sinevia/php-library-fastest
 ```
 
-Add the following to your composer file:
-
-```json
-   "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/sinevia/php-library-fastest.git"
-        }
-    ],
-    "require": {
-        "sinevia/php-library-fastest": "dev-master"
-    },
-```
+2. Manually. Copy the fastest.php file and use the include_once function to include
 
 ## Usage ##
 
@@ -53,6 +41,14 @@ require_once('../actions/login_action.php');
 
 // Execute the router
 \Sinevia::fastest();
+```
+
+Alternatively, output the result as string and execute yourself
+
+```php
+// Get the result as string and output
+$result = \Sinevia::fastest(['output_as_string' => true]);
+die($result);
 ```
 
 2. Example functions
