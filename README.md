@@ -58,15 +58,15 @@ die($result);
  * route: ?a= or /
  */
 function home_action {
-    echo 'Home';
+    return 'Home';
 }
 
 /**
- * The home function
+ * The login function
  * route: ?a=login or /login
  */
 function login_action {
-    echo 'Login';
+    return 'Login';
 }
 
 ```
