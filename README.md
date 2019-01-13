@@ -43,7 +43,14 @@ require_once('../actions/login_action.php');
 \Sinevia::fastest();
 ```
 
-Alternatively, output the result as string and execute yourself
+- Optionally the action can be set manually, for instance to have nice URLs
+
+```php
+// Manually set the action and execute
+$result = \Sinevia::fastest(['action' => $_SERVER['REQUEST_URI']]);
+```
+
+- Optionally the result can be output as string to be processed manually further
 
 ```php
 // Get the result as string and output
