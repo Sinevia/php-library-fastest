@@ -3,22 +3,32 @@
 Fastest router
 
 ## How it works ##
-Simple and unassuming router. 
+
+Simple and unassuming router.
+
 1. The router checks for an action parameter in the URL. If not found assumes "home".
 
-   index.php?a=home (this is default)
-   index.php?a=register
+```
+index.php?a=home (this is default)
+index.php?a=register
+
+```
    
 2. Executes a PHP function for the requested action.
+
 3. The action function has the same name as the requested action with the "_action" postfix.
 
-   (action: home => function: home_action)
-   (action: register => function: register_action)
+```
+(action: home => function: home_action)
+(action: register => function: register_action)
+```
    
 4. Dashes, spaces, and forward slashes are replaced with underscores 
 
-   (action: auth/login => function: auth_login_action)
-   (action: auth-login => function: auth_login_action)
+```
+(action: auth/login => function: auth_login_action)
+(action: auth-login => function: auth_login_action)
+```
 
 ## Installation ##
 
@@ -47,7 +57,8 @@ require_once('../actions/login_action.php');
 
 ```php
 // Manually set the action and execute
-$result = \Sinevia::fastest(['action' => $_SERVER['REQUEST_URI']]);
+$uri = strtok($_SERVER["REQUEST_URI"],'?');
+$result = \Sinevia::fastest(['action' => $uri]);
 ```
 
 - Optionally the result can be output as string to be processed manually further
